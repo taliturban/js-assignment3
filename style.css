@@ -1,0 +1,133 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    background-color: #f0f8ff; 
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+header h1 {
+    text-align: center;
+    color: #70c960; 
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #0e0e0e; 
+}
+
+.container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#title1 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 200px;
+}
+
+.front {
+    background-color: #cb168c;
+    color: white;
+    
+}
+
+.back {
+    background-color: #6dd892;
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.styled-select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.ingredients-box {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ingredient-item {
+    margin-right: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; 
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#orderSummary {
+    width: 100%;
+    height: 100%; 
+    padding: 20px;
+    border: 1px solid #4CAF50; 
+    border-radius: 8px;
+    background-color: #84cf8f;
+    color: #333; 
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+}

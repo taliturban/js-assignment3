@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Shake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BOOM SMOOTHIE</h1>
+    </header>
+    <main class="container">
+        <div class="card" id="card">
+            <div class="front">
+                <form id="smoothieForm">
+                    <fieldset>
+                        <legend id="title1">PICK YOUR ITEMS</legend>
+                        <label for="size">SIZE</label>
+                        <select id="size" name="size" class="styled-select">
+                            <option value="small" data-price="8.99">Small ($8.99)</option>
+                            <option value="medium" data-price="9.99">Medium ($9.99)</option>
+                            <option value="large" data-price="11.99">Large ($11.99)</option>
+                            <option value="xlarge" data-price="14.99">X-Large ($14.99)</option>
+                        </select>
+                        <br><br><br>
+                        <label for="base">BASE</label>
+                        <select id="base" name="base" class="styled-select">
+                            <option value="milk" data-price="1">2% Milk ($1)</option>
+                            <option value="almondMilk" data-price="1.5">Almond Milk ($1.5)</option>
+                            <option value="soyMilk" data-price="1.5">Oat Milk ($1.5)</option>
+                            <option value="juice" data-price="0.5">Water ($0.5)</option>
+                        </select>
+                        <br><br><br>
+                        <label for="ingredients">MIX-IN</label>
+                        <div class="ingredients-box">
+                            <div class="ingredients-container">
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="banana" name="ingredients" value="Banana" data-price="0.5">
+                                    <label for="banana">Banana ($0.5)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="strawberry" name="ingredients" value="Strawberry" data-price="0.5">
+                                    <label for="strawberry">Strawberry ($0.5)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="blueberry" name="ingredients" value="Blueberry" data-price="0.5">
+                                    <label for="blueberry">Blueberry ($0.5)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="mango" name="ingredients" value="Mango" data-price="0.5">
+                                    <label for="mango">Mango ($0.5)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="whey" name="ingredients" value="Whey Protein" data-price="1">
+                                    <label for="whey">Whey Protein ($1)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="pb" name="ingredients" value="Peanut Butter" data-price="0.5">
+                                    <label for="pb">Peanut Butter ($0.5)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="spinach" name="ingredients" value="Spinach" data-price="0.5">
+                                    <label for="spinach">Spinach ($0.5)</label>
+                                </div>
+                                <div class="ingredient-item">
+                                    <input type="checkbox" id="kale" name="ingredients" value="Kale" data-price="0.5">
+                                    <label for="kale">Kale ($0.5)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <button type="button" aria-label="Order Smoothie" onclick="orderSmoothie()">Order</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="back" id="orderSummary">
+                <h2>ORDER SUMMARY</h2>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
